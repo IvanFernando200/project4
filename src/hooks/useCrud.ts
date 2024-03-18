@@ -8,7 +8,9 @@ const useCrud = (
   (path: string) => void,
   (path: string, data: any) => void,
   (path: string, id: number) => void,
-  (path: string, id: number, data: any) => void
+  (path: string, id: number, data: any) => void,
+  any,
+  any
 ] => {
   const [response, setResponse] = useState<any>();
   const [hasError, setHasError] = useState<any>(null);
