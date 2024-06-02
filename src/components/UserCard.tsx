@@ -12,7 +12,9 @@ const UserCard = ({
   handleOpenForm: any;
 }) => {
   const handleDelete = () => {
-    confirm(`Do you really wanna delete it?, to ${user.first_name} ${user.last_name}`) ? (
+    confirm(
+      `Do you really wanna delete it?, to ${user.first_name} ${user.last_name}`
+    ) ? (
       deleteUser("/users/", user.id)
     ) : (
       <></>

@@ -123,7 +123,6 @@ const UserForm = ({
             type="text"
             min={200}
             placeholder="..."
-            required
           />
         </label>
         <button className="bg-blue-700 block w-2/3 mx-auto mt-4 rounded-lg hover:brightness-125 p-2 font-extrabold">
