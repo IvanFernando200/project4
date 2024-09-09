@@ -16,7 +16,7 @@ function App() {
     updateUser,
     hasError,
     isLoading,
-  ] = useCrud("https://entregable2-user-crud-back.onrender.com");
+  ] = useCrud("https://users-crud.academlo.tech/");
 
   useEffect(() => {
     getUsers("/users/");
