@@ -16,7 +16,7 @@ function App() {
     updateUser,
     hasError,
     isLoading,
-  ] = useCrud("https://users-crud.academlo.tech/");
+  ] = useCrud("https://users-crud.academlo.tech");
 
   useEffect(() => {
     getUsers("/users/");
