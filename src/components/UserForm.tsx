@@ -24,10 +24,29 @@ const UserForm = ({
 
   const submit = (data: any) => {
     if (userEdit) {
-      updateUser("/users/", userEdit.id, data);
+      console.log(data);
+      updateUser("/users/", userEdit.id, {
+        email: data.email,
+        password: data.password,
+        first_name: data.first_name,
+        last_name: data.last_name,
+        birthday: data.birthday,
+        image_url:
+          data.image_url ||
+          "https://th.bing.com/th/id/OIP.Q89Ip1VWQmYrQ5k7jevA9wHaDV?w=1000&h=450&rs=1&pid=ImgDetMain",
+      });
       setUserEdit();
     } else {
-      createUser("/users/", data);
+      createUser("/users/", {
+        email: data.email,
+        password: data.password,
+        first_name: data.first_name,
+        last_name: data.last_name,
+        birthday: data.birthday,
+        image_url:
+          data.image_url ||
+          "https://th.bing.com/th/id/OIP.Q89Ip1VWQmYrQ5k7jevA9wHaDV?w=1000&h=450&rs=1&pid=ImgDetMain",
+      });
     }
     reset({
       email: "",

@@ -7,7 +7,7 @@ import UserCard from "./components/UserCard";
 function App() {
   const [userEdit, setUserEdit] = useState();
   const [isCloseForm, setIsCloseForm] = useState(true);
-
+  const BASEURL = "https://users-crud.academlo.tech";
   const [
     users,
     getUsers,
@@ -16,7 +16,7 @@ function App() {
     updateUser,
     hasError,
     isLoading,
-  ] = useCrud("https://users-crud.academlo.tech");
+  ] = useCrud(BASEURL);
 
   useEffect(() => {
     getUsers("/users/");
